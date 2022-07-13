@@ -1,4 +1,4 @@
-﻿CREATE TABLE tblHome (
+create table tblHome (
 	seq	number	NOT NULL,
 	pid	varchar2(15)	NOT NULL,
 	tseq	number	NOT NULL,
@@ -91,8 +91,8 @@ CREATE TABLE tblHomeBook (
 	id	varchar2(15)	NOT NULL,
 	bseq	number	NOT NULL,
 	bsseq	number	NOT NULL,
-	start	date	NOT NULL,
-	end	date	NOT NULL
+	startdate	date	NOT NULL,
+	enddate	date	NOT NULL
 );
 
 CREATE TABLE tblRoom (
@@ -128,8 +128,8 @@ CREATE TABLE tblCarBook (
 	cseq	number	NOT NULL,
 	bseq	number	NOT NULL,
 	bsseq	number	NOT NULL,
-	start	date	NOT NULL,
-	end	date	NOT NULL
+	startdate	date	NOT NULL,
+	enddate	date	NOT NULL
 );
 
 CREATE TABLE tblPayState (
@@ -208,7 +208,7 @@ CREATE TABLE tblActivityReview (
 	seq	number	NOT NULL,
 	rseq	number	NOT NULL,
 	id	varchar2(15)	NOT NULL,
-	start	number	NOT NULL,
+	startdate	number	NOT NULL,
 	content	varchar2(300)	NOT NULL,
 	regdate	date	NOT NULL
 );
@@ -222,18 +222,20 @@ CREATE TABLE tblCarReply (
 );
 
 CREATE TABLE tblOptionList (
-	seq	number	NOT NULL,
-	rseq	number	NOT NULL,
-	bseq	number	NOT NULL,
-	bath	varchar2(1)	NOT NULL	DEFAULT n,
-	pet	varchar2(1)	NOT NULL	DEFAULT n,
-	maxpeople	number	NOT NULL	DEFAULT 2,
-	smoke	varchar2(1)	NOT NULL	DEFAULT n,
-	pool	varchar2(1)	NOT NULL	DEFAULT n,
-	parking	varchar2(1)	NOT NULL	DEFAULT n,
-	cook	varchar2(1)	NOT NULL	DEFAULT n,
-	wifi	varchar2(1)	NOT NULL	DEFAULT n
+   seq   number   NOT NULL,
+   rseq   number   NOT NULL,
+   bseq   number   NOT NULL,
+   bath   varchar2(1)   default 'n' NOT NULL ,
+   pet   varchar2(1)   DEFAULT 'n' NOT NULL   ,
+   maxpeople   number DEFAULT 2   NOT NULL   ,
+   smoke   varchar2(1) DEFAULT 'n'   NOT NULL   ,
+   pool   varchar2(1)   DEFAULT 'n' NOT NULL   ,
+   parking   varchar2(1)   DEFAULT 'n' NOT NULL   ,
+   cook   varchar2(1)   DEFAULT 'n' NOT NULL   ,
+   wifi   varchar2(1)   DEFAULT 'n' NOT NULL   
 );
+
+
 
 CREATE TABLE tblHomeType (
 	seq	number	NOT NULL,
@@ -436,4 +438,12 @@ ALTER TABLE tblRegState ADD CONSTRAINT PK_TBLREGSTATE PRIMARY KEY (
 ALTER TABLE tblQuestionCategory ADD CONSTRAINT PK_TBLQUESTIONCATEGORY PRIMARY KEY (
 	seq
 );
+
+
+
+
+
+
+
+
 
