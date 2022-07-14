@@ -50,10 +50,12 @@ CREATE TABLE tblUserCoupon (
 	cseq	number	NOT NULL
 );
 
+
 CREATE TABLE tblActivity (
-	seq	number	NOT NULL,
+	seq	number	primary key,
 	pid	varchar2(15)	NOT NULL,
 	rseq	number	NOT NULL,
+    name varchar2(100) not null,
 	location	varchar2(150)	NOT NULL,
 	period	date	NOT NULL,
 	price	number	NOT NULL,
@@ -438,7 +440,6 @@ ALTER TABLE tblRegState ADD CONSTRAINT PK_TBLREGSTATE PRIMARY KEY (
 ALTER TABLE tblQuestionCategory ADD CONSTRAINT PK_TBLQUESTIONCATEGORY PRIMARY KEY (
 	seq
 );
-
 
 
 
