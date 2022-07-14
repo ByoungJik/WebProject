@@ -1,3 +1,4 @@
+
 create table tblHome (
 	seq	number	NOT NULL,
 	pid	varchar2(15)	NOT NULL,
@@ -443,8 +444,16 @@ ALTER TABLE tblQuestionCategory ADD CONSTRAINT PK_TBLQUESTIONCATEGORY PRIMARY KE
 
 
 
+ALTER TABLE `tblCarName` ADD CONSTRAINT `PK_TBLCARNAME` PRIMARY KEY (
+	`seq`,
+	`tseq`
+);
 
+ALTER TABLE `tblRegState` ADD CONSTRAINT `PK_TBLREGSTATE` PRIMARY KEY (
+	`seq`
+);
 
-
-
+ALTER TABLE `tblQuestionCategory` ADD CONSTRAINT `PK_TBLQUESTIONCATEGORY` PRIMARY KEY (
+	`seq`
+);
 
